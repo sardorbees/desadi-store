@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Artisan earth tones - warm, natural, handcrafted */
+    --background: 30 20% 98%;
+    --foreground: 25 40% 20%;
+
+    --card: 35 30% 96%;
+    --card-foreground: 25 40% 20%;
+
+    --popover: 35 30% 96%;
+    --popover-foreground: 25 40% 20%;
+
+    /* Terracotta primary - signature artisan color */
+    --primary: 15 75% 50%;
+    --primary-foreground: 30 20% 98%;
+
+    /* Warm cream secondary */
+    --secondary: 40 35% 88%;
+    --secondary-foreground: 25 40% 20%;
+
+    /* Muted earth tones */
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Sage accent for organic feel */
+    --accent: 140 20% 65%;
+    --accent-foreground: 25 40% 20%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 30 20% 98%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 15 75% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradients for rich visual depth */
+    --gradient-warm: linear-gradient(135deg, hsl(15 75% 50%), hsl(25 85% 55%));
+    --gradient-earth: linear-gradient(180deg, hsl(35 30% 96%), hsl(40 25% 92%));
+    --gradient-subtle: linear-gradient(to bottom, hsl(30 20% 98%), hsl(35 20% 95%));
+    
+    /* Shadows with warmth */
+    --shadow-soft: 0 2px 8px hsl(15 40% 20% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(15 40% 20% / 0.12);
+    --shadow-elevated: 0 8px 32px hsl(15 40% 20% / 0.16);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Dark mode with warm, cozy tones */
+    --background: 25 25% 12%;
+    --foreground: 30 20% 95%;
+
+    --card: 25 20% 16%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 25 20% 16%;
+    --popover-foreground: 30 20% 95%;
+
+    --primary: 15 75% 55%;
+    --primary-foreground: 30 20% 98%;
+
+    --secondary: 30 15% 22%;
+    --secondary-foreground: 30 20% 95%;
+
+    --muted: 25 15% 20%;
+    --muted-foreground: 30 10% 65%;
+
+    --accent: 140 25% 45%;
+    --accent-foreground: 30 20% 95%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 30 20% 98%;
+
+    --border: 25 15% 25%;
+    --input: 25 15% 25%;
+    --ring: 15 75% 55%;
+
+    /* Dark mode gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(15 70% 45%), hsl(25 80% 50%));
+    --gradient-earth: linear-gradient(180deg, hsl(25 20% 16%), hsl(25 25% 12%));
+    --gradient-subtle: linear-gradient(to bottom, hsl(25 25% 12%), hsl(25 20% 10%));
+    
+    /* Dark shadows */
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Artisan-specific utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-warm);
+  }
+  
+  .bg-gradient-warm {
+    background-image: var(--gradient-warm);
+  }
+  
+  .bg-gradient-earth {
+    background-image: var(--gradient-earth);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  /* Hover lift effect for cards */
+  .hover-lift {
+    @apply transition-smooth;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+}
