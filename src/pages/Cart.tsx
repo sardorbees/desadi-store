@@ -75,7 +75,7 @@ ${itemsText}
       });
 
       // Save order in backend
-      await fetch("http://127.0.0.1:8000/api/order/orders/", {
+      await fetch("https://backend-desadi-store.onrender.com/api/order/orders/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

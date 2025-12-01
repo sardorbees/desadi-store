@@ -93,7 +93,14 @@ const Home = () => {
                 Desadi Store
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Айоллар уй кийимларини сотиш, буюртма асосида катта хажмдаги уйоллар уй кийимларини ишлаб чикариш. Компаниямизнинг озига хослиги: Махсулотимиз сифати кафолатланади, чет эл, туркия сифати билан тенглаша олади, чоклари тоза, яхши хаво отказадиган 100% табий матолардан фойдаланамиз, хар кандай кийинликдаги моделларни ярата оламиз ва буюртма асосида тикиб бера оламиз. Инстаграмда 1000 дан ортик сотувлар болиб келмокда, Савдо сохасида 1 йиллик тажриба Ишлаб чикариш сохасида 5 ойлик тажриба Хозирда 3 нафар
+                Ayollar uy kiyimlarini sotish, buyurtma asosida katta hazhmdagi
+                ayollar ui kiimlarini ishlab chikarish.
+                Ozig hosliga ishlab chiqaruvchi kompaniyalar:
+                Mahsulotimiz sifati kafolatlanadi, chet el, turkiya sifati bilan tenglasha oladi, choclari toza, yahshi havo o'tadigan 100% tabiy matolardan foidalanamiz, har qandai kiinlikdagi modellarni yarata olamiz va buyurtma asosida tikib bera olamiz.
+                Instagram 1000 dan ortik sotuvlar bolib kelmokda,
+                Savdo 1 yillik tazhriba
+                Ishlab chikarish 5 oilik tazhriba
+                Xozird 3 nafar
               </p>
               <Link to="/about">
                 <Button size="lg">
